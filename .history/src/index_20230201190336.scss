@@ -1,0 +1,11 @@
+@layer base {
+  body {
+    @apply font-primary text-base;
+  }
+  input {
+    @apply outline-none;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
