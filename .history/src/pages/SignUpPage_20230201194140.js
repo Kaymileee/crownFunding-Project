@@ -13,9 +13,7 @@ const SignUpPage = () => {
     control,
     formState: { isValid, isSubmitting },
   } = useForm({});
-  const handleSignUp = (values) => {
-    console.log(values);
-  };
+  const handleSignUp = (values) => {};
   return (
     <div>
       <LayoutAuthentication heading="Sign Up">
@@ -65,9 +63,7 @@ const SignUpPage = () => {
               <span className="underline text-secondary">Privacy policy</span>.
             </p>
           </div>
-          <Button className="w-full bg-primary" type="submit">
-            Create my account
-          </Button>
+          <Button className="w-full bg-primary">Create my account</Button>
         </form>
       </LayoutAuthentication>
     </div>

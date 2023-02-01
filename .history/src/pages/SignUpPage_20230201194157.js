@@ -13,9 +13,7 @@ const SignUpPage = () => {
     control,
     formState: { isValid, isSubmitting },
   } = useForm({});
-  const handleSignUp = (values) => {
-    console.log(values);
-  };
+  const handleSignUp = (values) => {};
   return (
     <div>
       <LayoutAuthentication heading="Sign Up">

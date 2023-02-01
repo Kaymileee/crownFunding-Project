@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { Button } from "../components/button";
 import FormGroup from "../components/common/FormGroup";
 import Input from "../components/input/Input";
 import Label from "../components/label/Label";
@@ -11,11 +10,9 @@ const SignUpPage = () => {
   const {
     handleSubmit,
     control,
-    formState: { isValid, isSubmitting },
+    formState: { isValid },
   } = useForm({});
-  const handleSignUp = (values) => {
-    console.log(values);
-  };
+  const handleSignUp = (values) => {};
   return (
     <div>
       <LayoutAuthentication heading="Sign Up">
@@ -35,39 +32,9 @@ const SignUpPage = () => {
         </p>
         <form onSubmit={handleSubmit(handleSignUp)}>
           <FormGroup>
-            <Label htmlFor={"name"}>Full Name *</Label>
+            <Label>Full Name *</Label>
             <Input control={control} name="name" placeholder="John Doe"></Input>
           </FormGroup>
-          <FormGroup>
-            <Label htmlFor={"email"}>Email *</Label>
-            <Input
-              control={control}
-              name="email"
-              type={"email"}
-              placeholder="example@gmail.com"
-            ></Input>
-          </FormGroup>
-          <FormGroup>
-            <Label htmlFor={"password"}>Password *</Label>
-            <Input
-              control={control}
-              name="password"
-              type={"password"}
-              placeholder="create a password"
-            ></Input>
-          </FormGroup>
-          <div className="flex items-start mb-5 gap-x-5">
-            <span className="inline-block w-5 h-5 border rounded border-text4"></span>
-            <p className="flex-1 text-xs font-normal lg:text-sm text-text2">
-              I agree to the{" "}
-              <span className="underline text-secondary">Terms of Use</span> and
-              have read and understand the{" "}
-              <span className="underline text-secondary">Privacy policy</span>.
-            </p>
-          </div>
-          <Button className="w-full bg-primary" type="submit">
-            Create my account
-          </Button>
         </form>
       </LayoutAuthentication>
     </div>

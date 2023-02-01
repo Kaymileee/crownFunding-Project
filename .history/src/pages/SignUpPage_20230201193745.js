@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { Button } from "../components/button";
 import FormGroup from "../components/common/FormGroup";
 import Input from "../components/input/Input";
 import Label from "../components/label/Label";
@@ -13,9 +12,7 @@ const SignUpPage = () => {
     control,
     formState: { isValid, isSubmitting },
   } = useForm({});
-  const handleSignUp = (values) => {
-    console.log(values);
-  };
+  const handleSignUp = (values) => {};
   return (
     <div>
       <LayoutAuthentication heading="Sign Up">
@@ -65,9 +62,7 @@ const SignUpPage = () => {
               <span className="underline text-secondary">Privacy policy</span>.
             </p>
           </div>
-          <Button className="w-full bg-primary" type="submit">
-            Create my account
-          </Button>
+          <Button></Button>
         </form>
       </LayoutAuthentication>
     </div>

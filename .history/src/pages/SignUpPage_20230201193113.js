@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { Button } from "../components/button";
 import FormGroup from "../components/common/FormGroup";
 import Input from "../components/input/Input";
 import Label from "../components/label/Label";
@@ -13,9 +12,7 @@ const SignUpPage = () => {
     control,
     formState: { isValid, isSubmitting },
   } = useForm({});
-  const handleSignUp = (values) => {
-    console.log(values);
-  };
+  const handleSignUp = (values) => {};
   return (
     <div>
       <LayoutAuthentication heading="Sign Up">
@@ -56,18 +53,15 @@ const SignUpPage = () => {
               placeholder="create a password"
             ></Input>
           </FormGroup>
-          <div className="flex items-start mb-5 gap-x-5">
-            <span className="inline-block w-5 h-5 border rounded border-text4"></span>
-            <p className="flex-1 text-xs font-normal lg:text-sm text-text2">
+          <div className="flex items-start gap-x-5">
+            <span className="inline-block w-5 h-5 rounded"></span>
+            <p className="text-xs font-normal lg:text-sm text-text2">
               I agree to the{" "}
               <span className="underline text-secondary">Terms of Use</span> and
               have read and understand the{" "}
               <span className="underline text-secondary">Privacy policy</span>.
             </p>
           </div>
-          <Button className="w-full bg-primary" type="submit">
-            Create my account
-          </Button>
         </form>
       </LayoutAuthentication>
     </div>

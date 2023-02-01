@@ -9,7 +9,7 @@ const Input = (props) => {
       <input
         id={name}
         type={type}
-        className={`w-full px-6 py-4 border-strockColor border rounded-xl text-text1 text-sm font-medium placeholder:text-text4 `}
+        className={`w-full px-6 py-4 border-strockColor border rounded-xl text-text1 text-sm font-medium placeholder:text-text4 focus:border-primary`}
         {...field}
         {...rest}
       />

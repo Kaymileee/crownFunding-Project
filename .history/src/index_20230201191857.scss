@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   body {
-    @apply text-base font-primary font-normal;
+    @apply text-base font-primary;
   }
   input {
     @apply outline-none;
