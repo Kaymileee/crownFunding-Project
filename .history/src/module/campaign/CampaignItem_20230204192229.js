@@ -1,0 +1,18 @@
+import React from "react";
+
+const CampaignItem = ({}) => {
+  return (
+    <div>
+      <div className="h-[158px] ">
+        <img
+          src="https://source.unsplash.com/random"
+          alt=""
+          className="object-cover w-full h-full rounded-2xl"
+        />
+      </div>
+      <div className="px-5 py-4"></div>
+    </div>
+  );
+};
+
+export default CampaignItem;
