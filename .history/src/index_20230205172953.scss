@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply text-base font-primary font-normal;
+    background: #000;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1440px;
+  }
+  input {
+    @apply outline-none;
+  }
+}
+input:focus + .error-input {
+  display: none;
+}
