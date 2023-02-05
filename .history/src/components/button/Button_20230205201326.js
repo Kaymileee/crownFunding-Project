@@ -51,11 +51,9 @@ const Button = ({
   );
 };
 Button.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
-  href: PropTypes.string,
-  // kind: PropTypes.oneOf(["primary", "secondary", "ghost"]),
 };
 export default Button;

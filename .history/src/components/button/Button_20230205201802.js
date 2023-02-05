@@ -56,6 +56,6 @@ Button.propTypes = {
   className: PropTypes.string,
   isLoading: PropTypes.bool,
   href: PropTypes.string,
-  // kind: PropTypes.oneOf(["primary", "secondary", "ghost"]),
+  kind: PropTypes.oneOf(["primary", "secondary", "ghost"]),
 };
 export default Button;

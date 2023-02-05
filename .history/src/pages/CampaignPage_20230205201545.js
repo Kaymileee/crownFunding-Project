@@ -63,7 +63,7 @@ const CampaignPage = () => {
         <CampaignFeature></CampaignFeature>
         <CampaignFeature></CampaignFeature>
       </CampaignGrid>
-      <Button kind="ghost" className={" px-8 my-10 mx-auto"} type="button">
+      <Button kind="ghost" className={" px-8 my-10"} type="button">
         <span>See more</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

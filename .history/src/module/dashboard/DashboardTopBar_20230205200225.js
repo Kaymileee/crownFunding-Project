@@ -21,7 +21,7 @@ const DashboardTopBar = () => {
           className={" px-7 text-white"}
           kind="secondary"
           type="button"
-          href="/start-campaign"
+          href="/campaign"
         >
           Start a campaign
         </Button>

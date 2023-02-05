@@ -19,9 +19,9 @@ const DashboardTopBar = () => {
         <DashboardFun></DashboardFun>
         <Button
           className={" px-7 text-white"}
-          kind="secondary"
+          kind="primary"
           type="button"
-          href="/start-campaign"
+          href="/campaign"
         >
           Start a campaign
         </Button>

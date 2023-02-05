@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 const Button = ({
   type = "button",
   children,
-  className = "",
+  className = "text-white",
   isLoading = false,
-  kind = "",
   ...rest
 }) => {
   const child = !!isLoading ? (
@@ -14,26 +13,12 @@ const Button = ({
   ) : (
     children
   );
-  let defaultClassName =
+  const defaultClassName =
     "py-4 text-base font-semibold rounded-xl  flex justify-center items-center  min-h-[56px]";
-  switch (kind) {
-    case "primary":
-      defaultClassName = defaultClassName + " bg-primary text-white";
-      break;
-    case "secondary":
-      defaultClassName = defaultClassName + " bg-secondary text-white";
-      break;
-    case "ghost":
-      defaultClassName =
-        defaultClassName + " bg-secondary bg-opacity-10 text-secondary";
-      break;
-    default:
-      break;
-  }
   if (rest.href) {
     return (
       <Link to={rest.href} className={`${defaultClassName} ${className}`}>
-        {children}
+        demo
       </Link>
     );
   }
@@ -51,11 +36,9 @@ const Button = ({
   );
 };
 Button.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
-  href: PropTypes.string,
-  // kind: PropTypes.oneOf(["primary", "secondary", "ghost"]),
 };
 export default Button;

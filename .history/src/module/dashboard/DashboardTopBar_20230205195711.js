@@ -18,10 +18,9 @@ const DashboardTopBar = () => {
       <div className="flex items-center justify-end flex-1 gap-x-10">
         <DashboardFun></DashboardFun>
         <Button
-          className={" px-7 text-white"}
-          kind="secondary"
+          className={"bg-secondary  px-7 text-white"}
           type="button"
-          href="/start-campaign"
+          href="/campaign"
         >
           Start a campaign
         </Button>

@@ -6,7 +6,6 @@ const Button = ({
   children,
   className = "",
   isLoading = false,
-  kind = "",
   ...rest
 }) => {
   const child = !!isLoading ? (
@@ -16,16 +15,12 @@ const Button = ({
   );
   let defaultClassName =
     "py-4 text-base font-semibold rounded-xl  flex justify-center items-center  min-h-[56px]";
-  switch (kind) {
+  switch (rest.kind) {
     case "primary":
-      defaultClassName = defaultClassName + " bg-primary text-white";
+      defaultClassName = defaultClassName + "bg-primary text-white";
       break;
     case "secondary":
-      defaultClassName = defaultClassName + " bg-secondary text-white";
-      break;
-    case "ghost":
-      defaultClassName =
-        defaultClassName + " bg-secondary bg-opacity-10 text-secondary";
+      defaultClassName = defaultClassName + "bg-secondary text-white";
       break;
     default:
       break;
@@ -51,11 +46,9 @@ const Button = ({
   );
 };
 Button.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
-  href: PropTypes.string,
-  // kind: PropTypes.oneOf(["primary", "secondary", "ghost"]),
 };
 export default Button;

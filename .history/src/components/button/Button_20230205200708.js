@@ -24,8 +24,7 @@ const Button = ({
       defaultClassName = defaultClassName + " bg-secondary text-white";
       break;
     case "ghost":
-      defaultClassName =
-        defaultClassName + " bg-secondary bg-opacity-10 text-secondary";
+      defaultClassName = defaultClassName + " bg-secondary text-white";
       break;
     default:
       break;
@@ -51,11 +50,9 @@ const Button = ({
   );
 };
 Button.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
-  href: PropTypes.string,
-  // kind: PropTypes.oneOf(["primary", "secondary", "ghost"]),
 };
 export default Button;
