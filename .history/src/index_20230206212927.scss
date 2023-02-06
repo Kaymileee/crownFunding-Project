@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply text-base font-primary font-normal mx-auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1440px;
+  }
+  input {
+    @apply outline-none;
+  }
+}
+input:focus + .error-input {
+  display: none;
+}
+.quill {
+  border: 1px solid #f1f1f3;
+  border-radius: 10px;
+  padding: 15px 25px;
+  .ql-toolbar.ql-snow {
+    border: none;
+    @apply bg-text4 bg-opacity-10 rounded-xl py-3 px-5 inline-block mx-auto max-w-[281px];
+  }
+}
