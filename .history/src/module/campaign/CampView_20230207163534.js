@@ -84,11 +84,7 @@ const CampView = () => {
         </Button>
       </div>
       <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] mb-[70px]">
-        <div>
-          <h2 className="mb-5 text-lg font-semibold">STORY</h2>
-          <div className="w-full bg-white"></div>
-        </div>
-
+        <div></div>
         <div>
           <CampSupport></CampSupport>
           <div className="mb-[60px]"></div>
@@ -100,14 +96,12 @@ const CampView = () => {
         </div>
       </div>
       <div className="mb-10">
+        {" "}
         <CampTitle>You also may be interested in</CampTitle>
       </div>
+
       <CampaignGrid>
-        {Array(4)
-          .fill(0)
-          .map((item, index) => (
-            <CampaignItem key={index}></CampaignItem>
-          ))}
+        <CampaignItem></CampaignItem>
       </CampaignGrid>
     </Fragment>
   );

@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../../components/button/Button";
-import CampaignGrid from "./CampaignGrid";
-import CampaignItem from "./CampaignItem";
 import CamCategory from "./parts/CamCategory";
 import CampDesc from "./parts/CampDesc";
 import CampImg from "./parts/CampImg";
@@ -83,32 +81,15 @@ const CampView = () => {
           Back this project
         </Button>
       </div>
-      <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] mb-[70px]">
-        <div>
-          <h2 className="mb-5 text-lg font-semibold">STORY</h2>
-          <div className="w-full bg-white"></div>
-        </div>
-
+      <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] ">
+        <div></div>
         <div>
           <CampSupport></CampSupport>
           <div className="mb-[60px]"></div>
-          <div className="flex flex-col gap-y-8">
-            <CampPerk></CampPerk>
-            <CampPerk></CampPerk>
-            <CampPerk></CampPerk>
-          </div>
+          <div className="flex flex-col gap-y-8"></div>
+          <CampPerk></CampPerk>
         </div>
       </div>
-      <div className="mb-10">
-        <CampTitle>You also may be interested in</CampTitle>
-      </div>
-      <CampaignGrid>
-        {Array(4)
-          .fill(0)
-          .map((item, index) => (
-            <CampaignItem key={index}></CampaignItem>
-          ))}
-      </CampaignGrid>
     </Fragment>
   );
 };

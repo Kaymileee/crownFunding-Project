@@ -85,8 +85,9 @@ const CampView = () => {
       </div>
       <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] mb-[70px]">
         <div>
-          <h2 className="mb-5 text-lg font-semibold">STORY</h2>
-          <div className="w-full bg-white"></div>
+          <div className="w-full bg-white">
+            <h2 className="mb-5 text-lg font-semibold">STORY</h2>
+          </div>
         </div>
 
         <div>

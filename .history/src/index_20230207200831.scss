@@ -52,6 +52,6 @@ input:focus + .error-input {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.scroll-hidden::-webkit-scrollbar {
+.scroll-hidden ::-webkit-scrollbar {
   display: none;
 }

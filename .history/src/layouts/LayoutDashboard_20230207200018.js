@@ -4,7 +4,7 @@ import ReactModal from "react-modal";
 import { Outlet } from "react-router-dom";
 import { Button } from "../components/button";
 import Overplay from "../components/common/Overplay";
-import CampPerk from "../module/campaign/parts/CampPerk";
+import { Input } from "../components/input";
 import DashboardSideBar from "../module/dashboard/DashboardSideBar";
 import DashboardTopBar from "../module/dashboard/DashboardTopBar";
 
@@ -15,11 +15,11 @@ const LayoutDashboard = ({ children }) => {
     <div className="p-10 bg-[#FCFCFD]  min-h-screen relative">
       {/* <div className="absolute inset-0 z-40 bg-black overplay bg-opacity-30"></div> */}
       <ReactModal
-        isOpen={false}
+        isOpen
         overlayClassName={
-          "modal-overplay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 "
+          "modal-overplay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
         }
-        className="modal-content max-w-[521px] w-full bg-white rounded-lg outline-none px-10 py-12 relative max-h-[90vh] overflow-y-auto scroll-hidden "
+        className="modal-content max-w-[521px] w-full bg-white rounded-lg outline-none px-10 py-12 relative"
       >
         <button className="absolute z-10 flex items-center justify-center text-opacity-50 w-11 h-11 top-[10px] right-12 text-text1">
           <svg
@@ -40,24 +40,19 @@ const LayoutDashboard = ({ children }) => {
         <h2 className="mb-10 text-2xl font-bold text-center text-text1">
           Back this project
         </h2>
-        <div className="mb-[60px]">
-          {" "}
-          <p className="mb-[10px] text-sm font-normal text-text2">
-            Enter the contribute amount
-          </p>
-          <input
-            placeholder="$10"
-            name="Pledge"
-            className="w-full px-5 py-4 mb-5 text-lg font-medium border rounded-lg border-strockColor"
-          ></input>
-          <p className="mb-5 text-sm font-normal text-text3">
-            Contribution are not associatied with perks
-          </p>
-          <Button className=" text-white bg-primary max-w-[162px] w-full">
-            Continue
-          </Button>
-        </div>
-        <CampPerk showBtn></CampPerk>
+        <p className="mb-[10px] text-sm font-normal text-text2">
+          Enter the contribute amount
+        </p>
+        <Input
+          placeholder="$10"
+          control={control}
+          name="Pledge"
+          className="w-full px-5 py-4 text-lg font-medium border rounded-lg border-strockColor"
+        ></Input>
+        <p>Contribution are not associatied with perks</p>
+        <Button className="w-auto text-white bg-primary max-w-[162px]">
+          Continue
+        </Button>
       </ReactModal>
       <Overplay></Overplay>
       <DashboardTopBar></DashboardTopBar>

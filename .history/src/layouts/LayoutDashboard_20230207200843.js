@@ -15,7 +15,7 @@ const LayoutDashboard = ({ children }) => {
     <div className="p-10 bg-[#FCFCFD]  min-h-screen relative">
       {/* <div className="absolute inset-0 z-40 bg-black overplay bg-opacity-30"></div> */}
       <ReactModal
-        isOpen={false}
+        isOpen
         overlayClassName={
           "modal-overplay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 "
         }

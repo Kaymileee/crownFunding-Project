@@ -15,11 +15,11 @@ const LayoutDashboard = ({ children }) => {
     <div className="p-10 bg-[#FCFCFD]  min-h-screen relative">
       {/* <div className="absolute inset-0 z-40 bg-black overplay bg-opacity-30"></div> */}
       <ReactModal
-        isOpen={false}
+        isOpen
         overlayClassName={
-          "modal-overplay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 "
+          "modal-overplay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
         }
-        className="modal-content max-w-[521px] w-full bg-white rounded-lg outline-none px-10 py-12 relative max-h-[90vh] overflow-y-auto scroll-hidden "
+        className="modal-content max-w-[521px] w-full bg-white rounded-lg outline-none px-10 py-12 relative"
       >
         <button className="absolute z-10 flex items-center justify-center text-opacity-50 w-11 h-11 top-[10px] right-12 text-text1">
           <svg
@@ -57,7 +57,7 @@ const LayoutDashboard = ({ children }) => {
             Continue
           </Button>
         </div>
-        <CampPerk showBtn></CampPerk>
+        <CampPerk></CampPerk>
       </ReactModal>
       <Overplay></Overplay>
       <DashboardTopBar></DashboardTopBar>

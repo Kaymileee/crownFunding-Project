@@ -20,7 +20,7 @@ const customStyles = {
     // transform: "translate(-50%, -50%)",
   },
 };
-Modal.defaultStyles = {};
+
 Modal.setAppElement("#root");
 
 function App() {

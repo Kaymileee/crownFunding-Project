@@ -12,16 +12,17 @@ const CampView = lazy(() => import("./module/campaign/CampView"));
 
 const customStyles = {
   content: {
-    // top: "50%",
-    // left: "50%",
-    // right: "auto",
-    // bottom: "auto",
-    // marginRight: "-50%",
-    // transform: "translate(-50%, -50%)",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
   },
 };
-Modal.defaultStyles = {};
-Modal.setAppElement("#root");
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement("#yourAppElement");
 
 function App() {
   return (
