@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply text-base font-primary font-normal mx-auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1440px;
+  }
+  input {
+    @apply outline-none;
+  }
+}
+input:focus + .error-input {
+  display: none;
+}
+.quill {
+  @apply border border-strockColor rounded-xl;
+  padding: 15px 25px;
+  .ql-toolbar.ql-snow {
+    border: none;
+    @apply bg-text4 bg-opacity-10 rounded-xl py-3 px-5 inline-block;
+  }
+  .ql-container.ql-snow,
+  .ql-editor {
+    @apply border-none font-primary text-sm;
+  }
+  .ql-editor {
+    @apply pt-10;
+  }
+  .ql-editor.ql-blank::before {
+    @apply text-sm not-italic text-text4;
+  }
+}
+// .gradient-banner {
+//   background: linear-gradient(
+//     179.14deg,
+//     rgba(32, 18, 63, 0) -7.14%,
+//     #000000 87.01%
+//   );
+// }
+.shadow-1 {
+  box-shadow: -4px 4px 8px rgba(226, 226, 226, 0.2),
+    4px 4px 8px rgba(226, 226, 226, 0.2);
+}
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+// custom date picker
+body .react-date-picker {
+  @apply w-full px-6 py-4 text-sm font-medium border rounded-xl placeholder:text-text4 dark:placeholder:text-text2 dark:text-white bg-transparent 
+border-strockColor text-text1 dark:border-darkStroke;
+
+  height: 54px;
+  .react-date-picker__wrapper {
+    @apply border-none justify-between items-center;
+  }
+  .react-date-picker__clear-button {
+    @apply hidden p-0;
+  }
+  .react-date-picker__inputGroup {
+    min-width: 0;
+    flex-grow: 0;
+  }
+}
+body.react-date-picker__calendar {
+  .react-date-picker__calendar .react-calendar {
+    @apply border-none rounded-lg;
+  }
+}
