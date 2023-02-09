@@ -15,7 +15,7 @@ import Button from "../../components/button/Button";
 import PerkOffer from "./parts/PerkOffer";
 import useOnchage from "../../hooks/useOnchange";
 import { toast } from "react-toastify";
-import { apiUrl, imgbbAPI } from "../../config/config";
+import { apiUrl } from "../../config/config";
 import ImageUpload from "../../components/image/ImageUpload";
 Quill.register("modules/imageUploader", ImageUploader);
 
@@ -61,17 +61,7 @@ const CampAddNew = () => {
       imageUploader: {
         // imgbbAPI
         upload: async (file) => {
-          const bodyFormData = new FormData();
-          bodyFormData.append("image", file);
-          const response = await axios({
-            method: "post",
-            url: imgbbAPI,
-            data: bodyFormData,
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          });
-          return response.data.data.url;
+          console.log("upload: ~ file", file);
         },
       },
     }),

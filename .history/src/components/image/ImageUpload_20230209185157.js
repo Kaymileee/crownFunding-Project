@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-import { toast } from "react-toastify";
 import { imgbbAPI } from "../../config/config";
 
 const ImageUpload = ({ onChange = () => {}, name = "" }) => {
@@ -20,10 +19,6 @@ const ImageUpload = ({ onChange = () => {}, name = "" }) => {
       },
     });
     const imgData = response.data.data;
-    if (!imgData) {
-      toast.error("Can't select the image");
-      return;
-    }
     const imgObj = {
       medium: imgData.medium.url,
       thumb: imgData.thumb,

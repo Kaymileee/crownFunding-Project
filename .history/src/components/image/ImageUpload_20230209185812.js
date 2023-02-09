@@ -22,7 +22,6 @@ const ImageUpload = ({ onChange = () => {}, name = "" }) => {
     const imgData = response.data.data;
     if (!imgData) {
       toast.error("Can't select the image");
-      return;
     }
     const imgObj = {
       medium: imgData.medium.url,

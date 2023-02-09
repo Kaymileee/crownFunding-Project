@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-import { toast } from "react-toastify";
 import { imgbbAPI } from "../../config/config";
 
 const ImageUpload = ({ onChange = () => {}, name = "" }) => {
@@ -8,8 +7,9 @@ const ImageUpload = ({ onChange = () => {}, name = "" }) => {
     const file = e.target.files[0];
     if (!file) return;
     // const { name: imageName } = file;
-
+    // onChange(name, response.data.data.url);
     const bodyFormData = new FormData();
+    console.log("upload: ~ bodyFormData", bodyFormData);
     bodyFormData.append("image", file);
     const response = await axios({
       method: "post",
@@ -19,17 +19,7 @@ const ImageUpload = ({ onChange = () => {}, name = "" }) => {
         "Content-Type": "multipart/form-data",
       },
     });
-    const imgData = response.data.data;
-    if (!imgData) {
-      toast.error("Can't select the image");
-      return;
-    }
-    const imgObj = {
-      medium: imgData.medium.url,
-      thumb: imgData.thumb,
-      url: imgData.url,
-    };
-    onChange(name, imgObj);
+    console.log(response.data.data);
   };
   return (
     <label className=" w-full border border-gray-200 border-dashed rounded-xl h-[200px] cursor-pointer   flex item justify-center">
