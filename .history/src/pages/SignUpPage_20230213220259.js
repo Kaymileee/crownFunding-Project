@@ -15,7 +15,6 @@ import ButtonGoogle from "../components/button/ButtonGoogle";
 import { Input } from "../components/input";
 import { useDispatch } from "react-redux";
 import { authRegister } from "../store/auth/auth-Slice";
-import { toast } from "react-toastify";
 const SignUpPage = () => {
   const schema = yup
     .object({
@@ -34,18 +33,12 @@ const SignUpPage = () => {
   const {
     handleSubmit,
     control,
-    reset,
     formState: { isValid, isSubmitting, errors },
   } = useForm({ resolver: yupResolver(schema), mode: "onSubmit" });
   const dispatch = useDispatch();
-  const handleSignUp = async (values) => {
-    try {
-      console.log(values);
-      dispatch(authRegister(values));
-      reset();
-    } catch (error) {
-      toast.error("Sorry !!");
-    }
+  const handleSignUp = (values) => {
+    console.log(values);
+    dispatch(authRegister(values));
   };
 
   const { value: acceptTerm, handleToggleValue: handleToggleTerm } =

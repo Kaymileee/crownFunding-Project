@@ -34,18 +34,15 @@ const SignUpPage = () => {
   const {
     handleSubmit,
     control,
-    reset,
     formState: { isValid, isSubmitting, errors },
   } = useForm({ resolver: yupResolver(schema), mode: "onSubmit" });
   const dispatch = useDispatch();
   const handleSignUp = async (values) => {
     try {
       console.log(values);
-      dispatch(authRegister(values));
-      reset();
-    } catch (error) {
-      toast.error("Sorry !!");
-    }
+      await dispatch(authRegister(values));
+      toast.success("Account is created");
+    } catch (error) {}
   };
 
   const { value: acceptTerm, handleToggleValue: handleToggleTerm } =
